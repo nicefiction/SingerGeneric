@@ -47,17 +47,18 @@ struct ContentView: View {
         VStack(spacing : 10) {
             // FilteredListView(filter : filteredLetter)
             FilteredListView(filterKey : "lastName" ,
-                             /**
-                             NOTICE how I have specifically used `(singer: Singer)` as the closure’s parameter
-                             — this is required
-                             so that Swift understands
-                             how `FilteredListView` is being used .
-                             Remember ,
-                             we said it could be any type of `NSManagedObject` ,
-                             but in order for Swift to know exactly what type of managed object it is
-                             we need to be explicit .
-                             */
                              filterValue : filteredLetter) { (singer: Singer) in
+                /**
+                 `NOTICE` how I have specifically used `(singer: Singer)`
+                 as the closure’s parameter
+                 — this is required
+                 so that Swift understands
+                 how `FilteredListView` is being used .
+                 Remember ,
+                 we said it could be any type of `NSManagedObject` ,
+                 but in order for Swift to know exactly what type of managed object it is
+                 we need to be explicit .
+                 */
                 Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
             }
             Group {

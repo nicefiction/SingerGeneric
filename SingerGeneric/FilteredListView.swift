@@ -6,6 +6,13 @@ import CoreData
 
 
 // struct FilteredListView: View {
+/**
+ ⭐️
+ Rather than specifically referencing the Singer class ,
+ we are going to use generics with a constraint
+ that whatever is passed in
+ must be an `NSManagedObject` :
+ */
 struct FilteredListView<T: NSManagedObject , Content: View>: View {
     
      // /////////////////
@@ -13,9 +20,14 @@ struct FilteredListView<T: NSManagedObject , Content: View>: View {
     
     // var fetchRequest: FetchRequest<Singer>
     var fetchRequest: FetchRequest<T>
+    
     /**
-     This is our content closure ;
-     we'll call this once for each item in the list :
+     ⭐️
+     Because we don’t know ahead of time what each entity will contain ,
+     we are going to let our containing view decide .
+     So , rather than just using a Text view of a singer’s name ,
+     we are instead going to ask for a closure
+     that can be run to configure the view however they want .
      */
     let content: (T) -> Content
     
@@ -37,6 +49,11 @@ struct FilteredListView<T: NSManagedObject , Content: View>: View {
             ForEach(singers , id : \.self) { (singer: T) in
                 // Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
                 self.content(singer)
+                /**
+                 This is our `content` closure ;
+                 we will call this once
+                 for each item in the list .
+                 */
             }
         }
     }
@@ -53,6 +70,12 @@ struct FilteredListView<T: NSManagedObject , Content: View>: View {
         fetchRequest = FetchRequest<T>(entity: T.entity() ,
                                        sortDescriptors: [] ,
                                        // predicate: NSPredicate(format : "lastName BEGINSWITH %@" ,
+                                       /**
+                                        ⭐️
+                                        We need to accept a second parameter
+                                        to decide which key name we want to filter on ,
+                                        because we might be using an entity that doesn’t have a `lastName` attribute .
+                                        */
                                        predicate: NSPredicate(format : "%K BEGINSWITH %@" ,
                                                               /**
                                                               `NSPredicate` has a special symbol
