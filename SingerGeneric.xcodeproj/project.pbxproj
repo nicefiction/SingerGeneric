@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090FE64826480FA3008118F6 /* FilteredListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FE64726480FA3008118F6 /* FilteredListView.swift */; };
+		09354C9A26480E07009DC873 /* Singer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09354C9826480E07009DC873 /* Singer+CoreDataClass.swift */; };
+		09354C9B26480E07009DC873 /* Singer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09354C9926480E07009DC873 /* Singer+CoreDataProperties.swift */; };
 		09A8EF2F26480D1500DE7B71 /* SingerGenericApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A8EF2E26480D1500DE7B71 /* SingerGenericApp.swift */; };
 		09A8EF3126480D1500DE7B71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A8EF3026480D1500DE7B71 /* ContentView.swift */; };
 		09A8EF3326480D1900DE7B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A8EF3226480D1900DE7B71 /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		090FE64726480FA3008118F6 /* FilteredListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredListView.swift; sourceTree = "<group>"; };
+		09354C9826480E07009DC873 /* Singer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		09354C9926480E07009DC873 /* Singer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		09A8EF2B26480D1500DE7B71 /* SingerGeneric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingerGeneric.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A8EF2E26480D1500DE7B71 /* SingerGenericApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerGenericApp.swift; sourceTree = "<group>"; };
 		09A8EF3026480D1500DE7B71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,7 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				09A8EF2E26480D1500DE7B71 /* SingerGenericApp.swift */,
+				09354C9826480E07009DC873 /* Singer+CoreDataClass.swift */,
+				09354C9926480E07009DC873 /* Singer+CoreDataProperties.swift */,
 				09A8EF3026480D1500DE7B71 /* ContentView.swift */,
+				090FE64726480FA3008118F6 /* FilteredListView.swift */,
 				09A8EF3226480D1900DE7B71 /* Assets.xcassets */,
 				09A8EF3726480D1900DE7B71 /* Persistence.swift */,
 				09A8EF3C26480D1900DE7B71 /* Info.plist */,
@@ -145,7 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				09A8EF3826480D1900DE7B71 /* Persistence.swift in Sources */,
+				09354C9B26480E07009DC873 /* Singer+CoreDataProperties.swift in Sources */,
 				09A8EF3126480D1500DE7B71 /* ContentView.swift in Sources */,
+				090FE64826480FA3008118F6 /* FilteredListView.swift in Sources */,
+				09354C9A26480E07009DC873 /* Singer+CoreDataClass.swift in Sources */,
 				09A8EF2F26480D1500DE7B71 /* SingerGenericApp.swift in Sources */,
 				09A8EF3B26480D1900DE7B71 /* SingerGeneric.xcdatamodeld in Sources */,
 			);
